@@ -1,0 +1,25 @@
+<div class="todo" >
+  <label for="add-todo">Add Todo</label>
+  <input
+    [(ngModel)]="newTodoTitle"
+    (input)="onInput($event.target.value)"
+    id="add-todo"
+    type="text"
+  />
+  <button (click)="onSubmit(newTodoTitle)">Submit</button>
+</div>
+
+
+<div *ngFor="let todo of todos; let id = index">
+  <div
+    [ngClass]="todo.completed ? 'done' : ''"
+    [id]="id"
+    (click)="onTodoClick($event.target.id)"
+  >
+    {{ todo.description }}
+  </div>
+  <button (click)="onDelete($event.target.previousElementSibling.id)">
+    Delete
+  </button>
+</div>
+

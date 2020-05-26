@@ -1,0 +1,9 @@
+.done  {
+    text-decoration: line-through;
+}
+
+
+.todo {
+    display: flex;
+    justify-content: center;
+}

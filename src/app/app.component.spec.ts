@@ -1,11 +1,16 @@
+import { Component } from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  @Component({selector: 'app-todo-component', template: ''})
+class TodoComponent {
+}
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        TodoComponent
       ],
     }).compileComponents();
   }));
@@ -22,10 +27,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('todo');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('todo app is running!');
-  });
+  
 });

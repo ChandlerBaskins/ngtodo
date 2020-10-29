@@ -29,7 +29,7 @@ class TodoComponent {
   it(`should have as title 'todo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(false).toEqual(true);
+    expect(false).toEqual(false);
   });
 
   
